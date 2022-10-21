@@ -4,10 +4,13 @@
 }
 
 .maxWidthWrapper {
+  max-width: 1024px;
+  position: relative;
 }
 
 .header {
   padding-bottom: 64px;
+  width: 65%;
 }
 
 .title {
@@ -24,7 +27,51 @@
 }
 
 .characterWrapper {
+  position: fixed;
+  left: 65%;
+  min-height: 500px;
+  top: 15%;
+  bottom: 5%;
 }
 
 .controlColumn {
+  width: 50%;
+}
+
+@media screen and (max-width: 28.75rem) {
+  .controlColumn {
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .characterWrapper {
+    position: static;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .mobileAbsoluteWrapper {
+    position: absolute;
+    left: 0;
+    /* Not sure why, page scrolls horizontally due to controlColumn */
+    overflow: hidden;
+    padding-left: 32px;
+    width: 100%;
+  }
+
+  .background {
+    display: none;
+  }
+}
+
+.background {
+  position: fixed;
+  top: 60%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: hsl(195deg, 20%, 86%);
 }

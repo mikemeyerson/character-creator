@@ -12,6 +12,16 @@
   margin-bottom: 32px;
 }
 
+@media screen and (max-width: 28.75rem) {
+  .controlPane {
+    display: inline-block;
+    max-width: 80vw;
+    margin-bottom: 0;
+    margin-right: 24px;
+  }
+}
+
+
 .title {
   margin: 0;
   /* Optical centering */
